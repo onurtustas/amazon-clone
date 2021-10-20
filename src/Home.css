@@ -1,0 +1,22 @@
+.home {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.homeImage {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -300px;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+}
+
+.homeRow {
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 1;
+    display: flex;
+
+}
