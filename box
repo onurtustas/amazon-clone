@@ -32,3 +32,8 @@ function Product({ title, image, price, rating }) {
 }
 
 export default Product;
+
+
+{basket.map((basketItem) => (
+            <span>{basketItem.image}</span>
+          ))}
