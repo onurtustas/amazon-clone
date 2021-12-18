@@ -5,7 +5,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import { getFirestore } from "firebase/firestore";
 
 //import {  } from "firebase/firestore";
 const firebaseConfig = {
@@ -24,10 +24,4 @@ const auth = getAuth();
 const analytics = getAnalytics(firebaseApp);
 const db = getFirestore(firebaseApp);
 
-export {
-  auth,
-  analytics,
-  db,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-};
+export { auth, db, signInWithEmailAndPassword, createUserWithEmailAndPassword };

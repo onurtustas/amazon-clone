@@ -59,6 +59,9 @@ function Home() {
             rating={4}
           />
         </div>
+        <div className="modalPopup">
+          
+        </div>
       </div>
     </div>
   );

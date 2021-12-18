@@ -4,8 +4,9 @@ import Rating from "@mui/material/Rating";
 import { useStateValue } from "./StateProvider";
 import FlipMove from "react-flip-move";
 
-function ProductSummary({ id, image, title, price, rating }) {
+function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
   const [{ basket }, dispatch] = useStateValue();
+  console.log(image);
 
   const removeFromBasket = () => {
     //dispatch
@@ -43,9 +44,11 @@ function ProductSummary({ id, image, title, price, rating }) {
             />
           </div>
           <div>
-            <button onClick={removeFromBasket} className="removeFromBasket">
-              Remove from Basket
-            </button>
+            {!hideButton && (
+              <button onClick={removeFromBasket} className="removeFromBasket">
+                Remove from Basket
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -53,4 +56,4 @@ function ProductSummary({ id, image, title, price, rating }) {
   );
 }
 
-export default ProductSummary;
+export default CheckoutProduct;
